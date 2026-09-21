@@ -15,7 +15,7 @@ material = "1.14.0"
 activityKtx = "1.13.0"
 constraintlayout = "2.2.2"
 kotlin = "2.4.20"
-ksp = "2.3.10"
+ksp = "2.3.12"
 glide = "5.0.9"
 dagger = "2.60.1"
 mpandroidchart = "v3.1.0"
@@ -60,8 +60,10 @@ play-services-location = { module = "com.google.android.gms:play-services-locati
 play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradle-plugin = { group = "com.google.devtools.ksp", name = "symbol-processing-gradle-plugin", version.ref = "ksp" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = {id = "org.jetbrains.kotlin.android", version.ref = "kotlin"}
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
