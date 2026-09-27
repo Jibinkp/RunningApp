@@ -1,13 +1,37 @@
 package com.example.runningapp.ui.fragments
 
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.runningapp.R
+import com.example.runningapp.databinding.FragmentSetupBinding
 import com.example.runningapp.ui.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.getValue
 
 @AndroidEntryPoint
-class SetUpFragment: Fragment(R.layout.fragment_setup) {
+class SetUpFragment: Fragment() {
     private val viewModel: MainViewModel by viewModels()
+    private var _binding: FragmentSetupBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentSetupBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.tvContinue.setOnClickListener {
+            findNavController().navigate(R.id.action_setUpFragment_to_runFragment)
+        }
+    }
 }
