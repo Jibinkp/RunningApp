@@ -8,4 +8,8 @@
         <item>Calories Burned</item>
     </string-array>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">ENTER YOUR API KEY HERE</string>
+    <string name="running_app">Running App</string>
+    <string name="your_run">Your Run</string>
+    <string name="statistics">Statistics</string>
+    <string name="settings">Settings</string>
 </resources>

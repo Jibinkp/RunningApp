@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/runFragment"
-        android:title="Your Run"
+        android:title="@string/your_run"
         android:icon="@drawable/ic_run"/>
 
     <item android:id="@+id/statisticFragment"
-        android:title="Statistics"
+        android:title="@string/statistics"
         android:icon="@drawable/ic_graph"/>
 
     <item android:id="@+id/settingsFragment"
-        android:title="Settings"
+        android:title="@string/settings"
         android:icon="@drawable/ic_settings"/>
 
 </menu>
